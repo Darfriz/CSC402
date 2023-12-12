@@ -16,7 +16,7 @@
 
     <item
         android:id="@+id/action_copy_link"
-        android:title="Copy Link"
+        android:title="Copy GitHub Link"
         app:showAsAction="never" />
 
 </menu>

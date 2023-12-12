@@ -13,8 +13,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"/>
+        android:background="#800080" <!-- Bright Purple color -->
+    android:elevation="4dp"/>
 
     <!-- Rest of the content -->
 
@@ -46,7 +46,8 @@
         android:layout_height="60dp"
         android:layout_margin="25dp"
         android:text="Calculate"
-        android:textColorHighlight="#FFFFFF" />
+        android:textColorHighlight="#FFFFFF"
+        android:background="#800080" /> <!-- Bright Purple color -->
 
     <TextView
         android:id="@+id/textViewResult"

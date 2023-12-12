@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.zakat.R;
+import android.net.Uri;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             // Share using an Intent
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Check out this link: https://github.com/Darfriz/ICT650.git"); // Change the message as needed
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Check out this link: https://github.com/Darfriz/Zakat-App"); // Change the message as needed
             sendIntent.setType("text/plain");
 
             Intent shareIntent = Intent.createChooser(sendIntent, "Share link via");
@@ -119,6 +120,15 @@ public class MainActivity extends AppCompatActivity {
 
             textViewResult.setText(result);
         }
+    }
+
+    public void openLink(View view) {
+        // Define the link you want to open
+        String url = "https://github.com/Darfriz/Zakat-App";
+
+        // Create an Intent to open the link
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
     }
 
     private boolean validateInputs() {
